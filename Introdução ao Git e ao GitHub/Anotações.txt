@@ -1,0 +1,142 @@
+Windows
+-cd
+-dir
+-mkdir
+-del/rmdir
+-cls
+-TAB -> autocompleta
+-echo hello > hello.txt
+-del workspace (arquivos)
+-rmdir workspace /S /Q
+
+Linux
+-cd
+-ls
+-mkdir
+-rm -rf
+-clear
+- CTRL + L
+-TAB -> autocompleta
+-echo hello > hello.txt
+-rm -rf workspace/
+
+===========================================
+
+CTRL + L -> Limpa tudo da tela
+
+===========================================
+
+Abir Git Bash
+
+===========================================
+
+Botão direito -> Git Bash here
+
+===========================================
+
+openssl sha1 texto.txt -> gera hash do arquivo (avaliar modificações no arquivo comparando os hashes gerados)
+
+===========================================
+
+Chave de conexão ssh
+
+ssh-keygen -t ed25519 -C maualsa@gmail.com
+
+cat id_ed25519.pub
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP6zoqK1YCl5hPQchGW5mc09skQZRiVcgbm2phM+4Ugq maualsa@gmail.com
+
+eval $(ssh-agent -s)
+
+ssh-add id_ed25519
+
+===========================================
+
+Para clonar um repositório
+
+git clone 'endereço ssh do repositório a ser clonado' -> comando deve ser feito no Git Bash na pasta destino local da máquina
+
+===========================================
+
+Outra forma de configurar o acesso
+
+git config --global user.email "maualsa@gmail.com"
+
+git config --global user.name maualsa
+
+git config --global --unset user.email
+
+git config --global --unset user.name
+
+===========================================
+
+git init -> inicia repositório git dentro da pasta da máquina com código (cria pasta oculta .git) (no Git Bash ls -a -> mostra pastas ocultas)
+
+git add -> mover arquivos (após ser incluído arquivo dentro da pasta -> git add *)
+
+git commit -> criar commit (git commit -m "commit inicial")
+
+todo comando inicia com git
+
+===========================================
+
+git status -> avaliar arquivos do diretório que possam ter sido alterados/mostra situação do repositório
+
+arquivo como md fora da pasta é apresentado formatado no git
+
+mv 'nome do arquivo' ./(subdiretório dentro do diretório que se encontra)-> comando para mover
+
+git add 'nome do arquivo' 'nome da pasta'
+
+git commit -m "mensagem relacionada ao que foi feito/commitado"
+
+===========================================
+
+**Fazer download do Typora para criação/manutenção de arquivos .md (markdown)
+
+echo > README.md -> cria arquivo na pasta atual
+
+git add * (adiciona todos os arquivos a área staging do repositório remoto)
+
+git commit -m "mensagem relacionada ao que foi feito/commitado"
+
+===========================================
+
+git config --list -> mostra configurações do git
+
+===========================================
+
+Apontamento do repositório local para o remoto
+
+git remote add origin git@github.com:maualsa/aprendizado.git (com SSH) - origin é apenas um alias
+
+git remote add origin https://github.com/maualsa/aprendizado.git (com HTTPS)
+
+git remote -v (lista os repositórios remotos cadastrados)
+
+git status
+
+git push origin master (envia os arquivos)
+
+git pull origin master (pega os arquivos)
+
+=============================================
+
+Conflitos:
+
+git add *
+
+git commit -m "resolve conflitos"
+
+git push origin master
+
+=============================================
+
+Clonar um repositório (quando se clona o conteúdo já vem como repositório com a pasta ./git)
+
+git clone 'url do repositório a ser clonado'
+
+
+
+
+
